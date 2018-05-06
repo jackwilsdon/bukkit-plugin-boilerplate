@@ -1,0 +1,6 @@
+name: @name@
+version: @version@
+description: @description@
+author: Example Author <contact@example.com>
+website: https://example.com
+main: com.example.boilerplate.BoilerplatePlugin
