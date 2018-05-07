@@ -14,14 +14,12 @@ repositories {
     mavenCentral()
 }
 
-processResources {
-    from("src/main/resources/plugin.yml") {
-        filter(ReplaceTokens, tokens: [
-                name: project.name,
-                description: project.description,
-                version: project.version,
-        ])
-    }
+processResources.from("src/main/resources/plugin.yml") {
+    filter(ReplaceTokens, tokens: [
+            name: project.name,
+            description: project.description,
+            version: project.version,
+    ])
 }
 
 jar.from {
