@@ -5,8 +5,8 @@ plugins {
 }
 
 dependencies {
-    compile "org.bukkit:bukkit:${bukkitVersion}"
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compileOnly "org.bukkit:bukkit:${bukkitVersion}"
+    runtime "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 repositories {
@@ -22,4 +22,8 @@ processResources {
                 version: project.version,
         ])
     }
+}
+
+jar.from {
+    configurations.runtime.collect { it.isDirectory() ? it : zipTree(it) }
 }
