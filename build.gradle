@@ -16,9 +16,9 @@ repositories {
 
 processResources.from("src/main/resources/plugin.yml") {
     filter(ReplaceTokens, tokens: [
-            name: project.name,
-            description: project.description,
-            version: project.version,
+        name: project.name,
+        description: project.description,
+        version: project.version,
     ])
 }
 
